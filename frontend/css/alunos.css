@@ -1,0 +1,255 @@
+#titulo {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 0px;
+    color: #2E4EAD;
+    z-index: 2;
+    margin-bottom: 0px;
+    width: 1000px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
+}
+
+#atributos-conteudo {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+    width: 970px;
+    margin: 0px auto;
+}
+
+h2 {
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+#container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+}
+
+#filtros-add {
+    display: flex;
+    justify-content: space-evenly;
+    width: 950px;
+    margin: 15px auto;
+    background-color: #F2F1F1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
+}
+
+#filtros-add input {
+    border: 1px solid rgba(0, 0, 0, .2);
+    outline: none;
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 35px;
+}
+
+#filtros-add select {
+    border: 1px solid rgba(0, 0, 0, .2);
+    outline: none;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    margin: 0px;
+}
+
+#add-user {
+    display: flex;
+    background-color: #21618C;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#btn-add {
+    width: 15%;
+    margin-right: 4px;
+}
+
+#atributos {
+    display: flex;
+    width: 970px;
+    padding: 10px 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #D9D9D9;
+}
+
+#atributos p {
+    width: 280px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+#conteudo {
+    width: 970px;
+}
+
+.conteudo-lista {
+    display: flex;
+    list-style-type: none;
+    margin: 15px 0px;
+}
+
+.conteudo-lista p {
+    margin-right: 100px;
+    width: 200px;
+}
+
+#conteudo h1 {
+    text-align: center;
+    margin: 200px;
+    opacity: 30%;
+}
+
+#pastas {
+    margin-left: 20px;
+}
+
+#opcoes-registro h2 {
+    margin: 10px;
+}
+
+#opcoes-registro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F1F1;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+    top: 245px;
+    right: 185px;
+    visibility: hidden;
+}
+
+.register-inputs {
+    /* display: flex;
+    flex-direction: column; */
+    margin: 20px 0px;
+}
+
+#close {
+    display: flex;
+    justify-content: end;
+    width: 270px;
+}
+
+#close img {
+    width: 7%;
+    cursor: pointer;
+}
+
+form label , input, select{
+    font-size: 18px;
+}
+
+#pesquisa-user {
+    height: 60px;
+
+}
+
+form input, select {
+    padding: 5px; 
+    margin: 0px auto;
+    width: 260px;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+form select {
+    width: 270px
+}
+
+.register-form {
+    position: absolute;
+    left: 44%;
+    padding: 20px 40px;
+    background-color: #CECECE;
+    visibility: hidden;
+    z-index: 1;
+    width: 270px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
+    z-index: 3;
+}
+
+.register-form h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* #register-professor {
+    visibility: visible;
+} */
+
+.register-form button {
+    font-size: 17px;
+    background-color: #2874A6;
+    border: 1px solid rgba(0, 0, 0, .2); 
+    padding: 3px;
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn-registrar {
+    display: flex;
+    justify-content: end;
+    width: 270;
+}
+
+#users {
+    display: flex;
+}
+
+#opcoes-registro button {
+    margin-left: 10px;
+}
+
+#inicio {
+    opacity: 50%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#alunos {
+    opacity: 100%;
+    background-color: #92A6E2;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+@media (min-width: 1340px) {
+    header {
+        min-width: 1129px;
+    }
+}
