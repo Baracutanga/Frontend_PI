@@ -3,19 +3,6 @@ const forms = document.querySelectorAll('.register-form');
 const btnClose = document.getElementById('btn-fechar');
 const btnSubmit = document.getElementById('submit-turma');
 
-function mouseEnterList() {
-    const listElements = document.getElementsByTagName('p');
-
-    Array.from(listElements).forEach((element) => {
-        element.addEventListener('mouseenter', () => {
-            element.style.backgroundColor = '#cbd7ff';
-        });
-        element.addEventListener('mouseleave', () => {
-            element.style.backgroundColor = '';
-        });
-    });
-}
-
 let turmas = [];
 let disciplinas = [];
 
