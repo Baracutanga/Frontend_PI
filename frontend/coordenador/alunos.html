@@ -97,89 +97,25 @@
                         <p>Email</p>
                         <p>Turma</p>
                     </div>
-                    <ul>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
+                    <ul id="lista">
+                        <h1 id="vazia">Lista Vazia :(</h1>
                     </ul>
                 </div>
             </div>
         </main>
     </div>
-    <form action="">
+    <form action="" id="form-alunos">
         <div id="close">
             <img src="../icons/close.svg" alt="close-icon" id="close-icon">
         </div>
         <h1>Aluno</h1>
         <label for="nome-input">Nome</label>
         <br>
-        <input type="text" name="input-nome" id="input-nome" placeholder="Nome" required>
+        <input type="text" name="nome-input" id="nome-input" placeholder="Nome" required>
         <br>
         <label for="email-input">Email</label>
         <br>
-        <input type="text" name="email-input" id="email-input" placeholder="Email" required>
+        <input type="email" name="email-input" id="email-input" placeholder="Email" required>
         <br>
         <label for="senha-input">Senha</label>
         <br>
@@ -187,15 +123,16 @@
         <br>
         <label for="select-turma">Turma</label>
         <br>
-        <select name="select-turma" id="select-turma" required>
+        <select name="select-turma" id="select-turma">
             <option value="" disabled hidden selected>Turma</option>
+            <option value="6702ee7eda44e6481fbdbfb5">6702ee7eda44e6481fbdbfb5</option>
         </select>
         <br>
         <button type="submit">Enviar</button>
     </form>
 
-    <script src="/frontend/js/registros.js"></script>
-    <script src="/frontend/app.js" type="module"></script>
+    <script src="../app.js" type="module"></script>
+    <script src="../js/alunos.js"></script>
 </body>
 
 </html>

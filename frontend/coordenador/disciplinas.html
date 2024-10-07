@@ -110,77 +110,14 @@
                         <p>Nome</p>
                         <p>Email</p>
                     </div>
-                    <ul>
-                        <li>
-                            <div class="nome">Disciplina</div>
-                            <div class="professor-atb">Professor atribuido</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome</div>
-                            <div class="email">Rodrigo</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
-                        <li>
-                            <div class="nome">Nome aluno</div>
-                            <div class="email">nome@email.com</div>
-                            <div class="turma">Manhã</div>
-                        </li>
+                    <ul id="lista">
+                        <h1 id="vazia">Lista Vazia :(</h1>
                     </ul>
                 </div>
             </div>
         </main>
     </div>
-    <form action="">
+    <form action="" id="form-disciplina">
         <div id="close">
             <img src="../icons/close.svg" alt="close-icon" id="close-icon">
         </div>
@@ -189,17 +126,19 @@
         <br>
         <input type="text" name="nome-input" id="nome-input" placeholder="Nome" required>
         <br>
-        <label for="select-disciplina">Disciplina</label>
+        <label for="select-disciplina">Professor</label>
         <br>
-        <select name="select-disciplina" id="select-disciplina" required>
-            <option value="">Disciplina</option>
+        <select name="select-professor" id="select-professor" required>
+            <option value="">Professor</option>
+            <option value="Julio">Julio</option>
+            <option value="rodrigo">Rodrigo</option>
         </select>
         <br>
         <button type="submit">Enviar</button>
     </form>
 
-    <script src="../js/registros.js"></script>
-    <script src="../app.js" type="module"></script>
+    <script src="../js/disciplinas.js"></script>
+    <script src="../app.js"></script>
 </body>
 
 </html>

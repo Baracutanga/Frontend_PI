@@ -19,7 +19,7 @@ const urlsToCache = [
     '../css/turmas.css',
     '../css/disciplinas.css',
     '../js/comunicados.js',
-    '../js/registros.js',
+    '../js/alunos.js',
     '/icons/icon-192x192.png',
     '/icons/icon-512x512.png'
 ];

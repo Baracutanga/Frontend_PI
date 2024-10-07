@@ -82,7 +82,7 @@ main {
     & button:hover {
         color: rgba(255, 255, 255, 1);
         transition: ease-in-out 100ms;
-        
+
         & img {
             transition: ease-in-out 100ms;
             opacity: 1;
@@ -111,7 +111,7 @@ main {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         display: flex;
-        gap: 30%;
+        gap: 25%;
         padding: 12px;
         padding-left: 40px;
         background-color: #E8E8E8;
@@ -136,14 +136,36 @@ main {
             color: rgba(0, 0, 0, .5)
         }
 
+        & .ver-mais {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 2px;
+            color: rgba(255, 255, 255, .4);
+            width: 30px;
+            height: 20px;
+            background-color: #21618C;
+            cursor: pointer;
+        }
+
+        & .ver-mais:hover {
+            color: rgba(255, 255, 255, 1);
+            transition: ease-in-out 100ms;
+        }
+
         & div {
             display: flex;
             align-items: center;
             background-color: rgba(0, 0, 0, 0);
-            width: 30%;
+            width: 26%;
             height: 100%;
             padding: 0px;
-            margin-left: 40px;
+            margin-left: 30px;
+        }
+
+        .turma {
+            width: 30%;
         }
 
         & li:hover {
@@ -171,7 +193,8 @@ form {
         margin-bottom: 20px;
     }
 
-    & select, input { 
+    & select,
+    input {
         border-radius: 3px;
         outline: none;
         font-size: 17px;
@@ -218,9 +241,18 @@ form {
         justify-content: end;
         width: 100%;
 
-        & img { 
+        & img {
             width: 10%;
             cursor: pointer;
         }
     }
+}
+
+#vazia {
+    color: #000;
+    opacity: .5;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
 }
