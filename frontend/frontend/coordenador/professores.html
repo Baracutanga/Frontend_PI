@@ -12,30 +12,13 @@
             opacity: .5;
         }
 
-        #disciplinas {
-            background-color: #92A6E2;
-            opacity: 100;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        #filtros {
-            gap: 20%;
-        }
-
-        #inicio {
-            background-color: rgba(0, 0, 0, 0);
-            opacity: .5;
-        }
-
-        #disciplina {
+        #professor {
             background-color: #92A6E2;
             opacity: 100;
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
         }
     </style>
-    <link rel="stylesheet" href="../css/disciplinas.css">
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +32,7 @@
     <nav id="menu">
         <div id="logo-user">
             <img src="/frontend/img/mediotec 1.png" alt="logo-mediotec">
-            <h3>Disciplinas</h3>
+            <h3>Coordenador</h3>
         </div>
         <hr>
         <div id="options">
@@ -63,7 +46,7 @@
             </div>
             <div id="conceitos">
                 <img src="../icons/conceitos.svg" alt="icon-conceitos">
-                <a href="../coordenador/conceitosEscolha.html" id="a-conceito">Conceitos</a>
+                <a href="#" id="a-conceito">Conceitos</a>
             </div>
             <div id="alunos">
                 <img src="../icons/student.svg" alt="icon-registro">
@@ -71,7 +54,7 @@
             </div>
             <div id="professor">
                 <img src="../icons/professor.svg" alt="icon-professor">
-                <a href="../coordenador/professores">Professor</a>
+                <a href="#">Professor</a>
             </div>
             <div id="coordenador">
                 <img src="../icons/admin-alt.svg" alt="icon-coordenadores">
@@ -83,11 +66,11 @@
             </div>
             <div id="disciplinas">
                 <img src="../icons/disciplinas.svg" alt="icon-disciplinas">
-                <a href="#">Disciplinas</a>
+                <a href="../coordenador/disciplinas.html">Disciplinas</a>
             </div>
         </div>
         <hr>
-        <a href="/frontend/index.html">Sair</a>
+        <a href="../index.html">Sair</a>
     </nav>
     <div id="geral">
         <header>
@@ -95,20 +78,24 @@
             <div id="pastas">
                 <a href="/frontend/coordenador/home.html" class="pasta-anterior">Home</a>
                 <p>></p>
-                <p id="pasta-atual">Disciplinas</p>
+                <p id="pasta-atual">Professores</p>
             </div>
         </header>
         <main>
-            <h1>Disciplinas</h1>
+            <h1>Professores</h1>
             <div id="conteudo">
                 <div id="filtros">
                     <input type="text" name="search-nome" id="search-nome" placeholder="nome">
+                    <select name="select-turma" id="select-turma">
+                        <option value="" selected hidden disabled>Disciplina</option>
+                    </select>
                     <button type="button" id="registrar"><img src="../icons/add.svg" alt="icon-add">Registrar</button>
                 </div>
                 <div id="container-lista">
                     <div>
                         <p>Nome</p>
                         <p>Email</p>
+                        <p>Turma</p>
                     </div>
                     <ul id="lista">
                         <h1 id="vazia">Lista Vazia :(</h1>
@@ -117,28 +104,27 @@
             </div>
         </main>
     </div>
-    <form action="" id="form-disciplina">
+    <form action="" id="form-professor">
         <div id="close">
             <img src="../icons/close.svg" alt="close-icon" id="close-icon">
         </div>
-        <h1>Disciplina</h1>
+        <h1>Professor</h1>
         <label for="nome-input">Nome</label>
         <br>
         <input type="text" name="nome-input" id="nome-input" placeholder="Nome" required>
         <br>
-        <label for="select-disciplina">Professor</label>
+        <label for="email-input">Email</label>
         <br>
-        <select name="select-professor" id="select-professor" required>
-            <option value="">Professor</option>
-            <option value="Julio">Julio</option>
-            <option value="rodrigo">Rodrigo</option>
-        </select>
+        <input type="email" name="email-input" id="email-input" placeholder="Email" required>
         <br>
+        <label for="senha-input">Senha</label>
+        <br>
+        <input type="password" name="senha-input" id="senha-input" placeholder="Senha" required>
         <button type="submit">Enviar</button>
     </form>
 
-    <script src="../js/disciplinas.js"></script>
-    <script src="../app.js"></script>
+    <script src="../js/professores.js"></script>
+    <script src="../app.js" type="module"></script>
 </body>
 
 </html>

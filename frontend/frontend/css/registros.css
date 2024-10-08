@@ -4,7 +4,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     /* 95% -> 950px */
     /* margin: 30px auto; */
 
@@ -93,8 +93,7 @@ main {
 #conteudo {
     width: 90%;
     margin: 0px auto;
-    height: 80%;
-    /* 60% -> 600px */
+    height: 500px;
     padding: 10px;
     background-color: #fff;
     z-index: 2;
@@ -255,25 +254,4 @@ form {
     width: 100%;
     margin-top: 10%;
     text-align: center;
-}
-
-@media screen and (max-width: 1024px) {
-
-    main {
-        height: 80vh;
-    }
-
-    #filtros button img {
-        margin-left: 20px;
-        width: 20%;
-        height: 100%;
-    }
-
-    #conteudo {
-        width: 90%;
-    }
-
-    #container-lista {
-        height: 71%;
-    }
 }

@@ -26,9 +26,26 @@
         padding: 0px;
         margin: 0px;
 
+        & button {
+            font-family: 'Albert Sans';
+            padding: 4px 7px;
+            background-color: #6085f3;
+            color: rgba(255, 255, 255, .7);
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 3px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, .2);
+            cursor: pointer;
+        }
+
+        & button:hover { 
+            box-shadow: none; 
+            color: rgba(255, 255, 255, 1);
+        }
+
         & li {
             padding: 10px;
             display: flex;
+            align-items: center;
             width: 98%;
             height: auto;
             color: rgba(0, 0, 0, .5)
@@ -38,7 +55,7 @@
             display: flex;
             align-items: center;
             background-color: rgba(0, 0, 0, 0);
-            width: 29%;
+            width: 30%;
             height: 100%;
             padding: 0px;
             margin-left: 40px;
