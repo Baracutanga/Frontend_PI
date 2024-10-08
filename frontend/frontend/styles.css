@@ -1,11 +1,9 @@
-/* @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css') */
-
 body {
     display: flex;
     background-color: #EFF2F4;
     margin: 0px;
     font-family: 'Albert Sans';
-    min-height: 100vh;
+    /* height: 100%; */
 }
 
 h1 {
@@ -24,7 +22,6 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
 }
 
 #container-main {
@@ -113,7 +110,7 @@ header {
 #menu {
     position: fixed;
     width: 220px;
-    height: 100vh;
+    height: 100%;
     background-color: #2E4EAD;
 
     & hr {
@@ -136,7 +133,7 @@ header {
     font-weight: 300;
 
     & div {
-        padding: 15px 0px 15px 20px;
+        padding: 20px 0px 20px 20px;
         display: flex;
         align-items: center;
         font-size: 15px;
@@ -146,9 +143,9 @@ header {
         }
     }
 
-    & div:hover {
+    & div:hover { 
         opacity: 100;
-        transition: ease-in-out 100ms 100ms;
+        transition: ease-in-out 100ms 100ms; 
     }
 
     & a {
@@ -177,16 +174,4 @@ header {
     color: rgba(255, 255, 255, 1);
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-
-@media screen and (max-width: 768px) {
-    #menu {
-        width: 170px;
-        height: 100vh;
-    }
-
-    #menu-placeholder {
-        min-width: 170px;
-        height: 100vh;
-    }
 }

@@ -12,11 +12,15 @@
             opacity: .5;
         }
 
-        #alunos {
+        #coordenador {
             background-color: #92A6E2;
             opacity: 100;
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
+        }
+
+        #filtros {
+            gap: 20%;
         }
     </style>
     <link rel="manifest" href="manifest.json">
@@ -46,11 +50,11 @@
             </div>
             <div id="conceitos">
                 <img src="../icons/conceitos.svg" alt="icon-conceitos">
-                <a href="../coordenador/comunicados.html" id="a-conceito">Conceitos</a>
+                <a href="../coordenador/conceitosEscolha.html" id="a-conceito">Conceitos</a>
             </div>
             <div id="alunos">
                 <img src="../icons/student.svg" alt="icon-registro">
-                <a href="#">Alunos</a>
+                <a href="../coordenador/alunos.html">Alunos</a>
             </div>
             <div id="professor">
                 <img src="../icons/professor.svg" alt="icon-professor">
@@ -58,7 +62,7 @@
             </div>
             <div id="coordenador">
                 <img src="../icons/admin-alt.svg" alt="icon-coordenadores">
-                <a href="../coordenador/coordenadores.html">Coordenadores</a>
+                <a href="#">Coordenadores</a>
             </div>
             <div id="turmas">
                 <img src="../icons/turmas.svg" alt="icon-turmas">
@@ -70,32 +74,28 @@
             </div>
         </div>
         <hr>
-        <a href="/frontend/index.html">Sair</a>
+        <a href="../index.html">Sair</a>
     </nav>
     <div id="geral">
         <header>
-            <img src=" /frontend/img/logo.png" alt="logo-senac" id="logo-senac">
+            <img src=" ../img/logo.png" alt="logo-senac" id="logo-senac">
             <div id="pastas">
-                <a href="/frontend/coordenador/home.html" class="pasta-anterior">Home</a>
+                <a href="../coordenador/home.html" class="pasta-anterior">Home</a>
                 <p>></p>
-                <p id="pasta-atual">Alunos</p>
+                <p id="pasta-atual">Coordenadores</p>
             </div>
         </header>
         <main>
-            <h1>Alunos</h1>
+            <h1>Coordenadores</h1>
             <div id="conteudo">
                 <div id="filtros">
                     <input type="text" name="search-nome" id="search-nome" placeholder="nome">
-                    <select name="select-turma" id="select-turma">
-                        <option value="" selected hidden disabled>Turma</option>
-                    </select>
                     <button type="button" id="registrar"><img src="../icons/add.svg" alt="icon-add">Registrar</button>
                 </div>
                 <div id="container-lista">
                     <div>
                         <p>Nome</p>
                         <p>Email</p>
-                        <p>Turma</p>
                     </div>
                     <ul id="lista">
                         <h1 id="vazia">Lista Vazia :(</h1>
@@ -104,11 +104,11 @@
             </div>
         </main>
     </div>
-    <form action="" id="form-alunos">
+    <form action="" id="form-coordenador">
         <div id="close">
             <img src="../icons/close.svg" alt="close-icon" id="close-icon">
         </div>
-        <h1>Aluno</h1>
+        <h1>Coordenador</h1>
         <label for="nome-input">Nome</label>
         <br>
         <input type="text" name="nome-input" id="nome-input" placeholder="Nome" required>
@@ -120,19 +120,11 @@
         <label for="senha-input">Senha</label>
         <br>
         <input type="password" name="senha-input" id="senha-input" placeholder="Senha" required>
-        <br>
-        <label for="select-turma">Turma</label>
-        <br>
-        <select name="select-turma" id="select-turma">
-            <option value="" disabled hidden selected>Turma</option>
-            <option value="6702ee7eda44e6481fbdbfb5">6702ee7eda44e6481fbdbfb5</option>
-        </select>
-        <br>
         <button type="submit">Enviar</button>
     </form>
 
-    <script src="../app.js" type="module"></script>
-    <script src="../js/alunos.js"></script>
+    <!-- <script src="../js/coordenadores.js"></script> -->
+    <script src="../app.js"></script>
 </body>
 
 </html>
