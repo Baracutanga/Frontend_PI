@@ -9,6 +9,12 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Login
+// const login = async (email, senha, tipoUsuario) => {
+//     try { 
+//         const response = await fetch('http://localhost:8000/api/login')
+//     }
+// }
 
 // Abrir/Fechar forms
 const btnRegistrar = document.getElementById('registrar');

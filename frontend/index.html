@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Portal Mediotec</title>
 </head>
 <body>
     <div id="login-container">
@@ -21,6 +22,19 @@
             <option value="professor">Professor</option>
             <option value="aluno">Aluno</option>
         </select>
+        <br>
+        <label for="input-email">Login</label>
+        <br>
+        <div class="inputs">
+            <img src="../frontend/icons/login.svg" alt="email-icon">
+            <input type="email" name="email-input" id="email-input" placeholder="Email">
+        </div>
+        <br>
+        <label for="senha-input">Senha</label>
+        <div class="inputs">
+            <img src="../frontend/icons/senha.svg" alt="senha-icon">
+            <input type="password" name="senha-input" id="senha-input" placeholder="Senha">
+        </div>
         <br>
         <button onclick="Redirecionar()"><h2>Entrar</h2></button>
     </div>
