@@ -42,7 +42,6 @@ main {
     flex-direction: row;
     gap: 6%;
     font-size: 20px;
-    /* justify-content: flex-start; */
     background-color: #D9D9D9;
     width: 97%;
     padding: 15px 10px;
@@ -52,7 +51,6 @@ main {
 
     & p {
         text-align: center;
-        /* margin-left: -2%; */
     }
 }
 

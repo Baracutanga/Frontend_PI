@@ -10,9 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        #inicio {
+            background-color: rgba(0, 0, 0, 0);
+            opacity: .5;
+        }
+
+        #conceitos {
+            background-color: #92A6E2;
+            opacity: 100;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    </style>
     <title>Portal mediotec</title>
 </head>
-
 <body>
     <div id="menu-placeholder"></div>
     <nav id="menu">
@@ -24,7 +36,7 @@
         <div id="options">
             <div id="inicio">
                 <img src="../icons/home.svg" alt="icon-home">
-                <a href="#">Início</a>
+                <a href="../coordenador/home.html">Início</a>
             </div>
             <div id="comunicados">
                 <img src="../icons/forum.svg" alt="icon-comunicados">
@@ -66,13 +78,23 @@
             <div id="titulo-filtro">
                 <h1>Selecionar Turma</h1>
                 <div id="input-search">
-                    <img src="../icons/" alt="">
+                    <img src="../icons/search.svg" alt="">
                     <input type="search" name="pesquisar-turma" id="pesquisar-turma" placeholder=" Pesquisar">
                 </div>
             </div>
-            <div id="atributos">
-
-            </div>
+            <div id="atributos">Nome da turma</div>
+            <ul>
+                <div id="vazia">Lista Vazia :(</div>
+                <!-- <li>
+                    <div class="nome-turno">
+                        <div class="nome">Turma 012</div>
+                        <div class="turno">[Manhã]</div>
+                    </div>
+                    <button type="button">
+                        <a href="../coordenador/conceito.html">Ver turma</a>
+                    </button>
+                </li> -->
+            </ul>
         </main>
     </div>
     

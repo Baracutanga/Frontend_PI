@@ -5,8 +5,6 @@ main {
     align-items: center;
     width: 100%;
     height: 90vh;
-    /* 95% -> 950px */
-    /* margin: 30px auto; */
 
     & h1 {
         background-color: #fff;
@@ -45,22 +43,9 @@ main {
         outline: none;
     }
 
-    & input {
-        height: 26px;
-        width: 20%;
-        /* padding: 8px; */
-        font-size: 14px;
-        border-radius: 5px;
-        font-family: 'Albert Sans';
-        margin-right: .5%;
-        border: 1px solid rgba(0, 0, 0, .2);
-        outline: none;
-        padding-left: 10px;
-    }
-
     & button {
         margin: 0px;
-        margin-left: 36%;
+        margin-left: 32%;
         padding-left: 0px;
         padding-right: 10%;
         width: 20%;
@@ -93,8 +78,7 @@ main {
 #conteudo {
     width: 90%;
     margin: 0px auto;
-    height: 80%;
-    /* 60% -> 600px */
+    height: 70vh;
     padding: 10px;
     background-color: #fff;
     z-index: 2;
@@ -255,6 +239,36 @@ form {
     width: 100%;
     margin-top: 10%;
     text-align: center;
+}
+
+#input-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .4);
+    width: 200px;
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 5px;
+
+    & input {
+        width: 100%;
+        border: 0px;
+        padding: 0px;
+        outline: none;
+        font-family: 'Albert Sans';
+        margin-left: 5px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    & img {
+        width: 6%;
+        filter: invert(1);
+        background-color: #ad8f2e;
+        padding: 5px;
+        border-radius: 20px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
