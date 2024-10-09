@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/styles.css">
-    <link rel="stylesheet" href="/frontend/css/comunicados.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/comunicados.css">
     <link rel="stylesheet" href="../css/verMaisComu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +68,7 @@
                 <p id="pasta-atual">Comunicados</p>
             </div>
         </header>
-        <main>
+        <form>
             <div id="header-aviso">
                 <input type="text" name="input-titulo" id="input-titulo" placeholder="Título">
             </div>
@@ -76,22 +76,6 @@
                 <textarea name="textarea-conteudo" id="textarea-conteudo" placeholder="Digite o aviso"></textarea>
             </div>
             <button type="submit"></button>
-        </main>
-        <form id="formulario">
-            <h1>Adicionar Aviso</h1>
-            <br>
-            <h3>Título</h3>
-            <br>
-            <input type="text" name="titulo" id="titulo-area" placeholder="Digite um titulo" maxlength="40">
-            <br>
-            <h3>Comunicado</h3>
-            <br>
-            <textarea name="comunicao-textarea" id="comunicao-textarea" placeholder="Digite o conteudo aqui"></textarea>
-            <br>
-            <div id="btn-enviar">
-                <button type="submit" id="enviar-btn" onmousedown="ClickChange()"
-                    onmouseup="ClickBack()">Enviar</button>
-            </div>
         </form>
     </div>
 

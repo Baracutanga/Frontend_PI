@@ -1,14 +1,15 @@
-main {
+form {
+    width: 80%;
+    height: 60vh;
     margin: 10px auto;
 
     & div {
         padding: 10px;
-        margin: 10px auto;
+        width: 100%;
     }
 
     & #header-aviso {
         background-color: #2E4EAD;
-        width: 80%;
 
         & input {
             padding: 10px;
@@ -17,12 +18,22 @@ main {
             background-color: rgba(0, 0, 0, 0);
             border: 0px;
             border-bottom:1px solid #000;
+            border-radius: 6px;
         }
     }
 
     & #conteudo-edit {
         background-color: #fff;
-        height: 60vh;
+        height: 55vh;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+    }
+
+    & button { 
+        font-family: 'Albert Sans';
+        width: 170px;
+        height: 60px;
+        border: 1px solid rgba(0, 0, 0, .4);
+        border-radius: 5px;
+        background-color: #2E4EAD; 
     }
 }
