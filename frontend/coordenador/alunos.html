@@ -46,7 +46,7 @@
             </div>
             <div id="conceitos">
                 <img src="../icons/conceitos.svg" alt="icon-conceitos">
-                <a href="../coordenador/comunicados.html" id="a-conceito">Conceitos</a>
+                <a href="../coordenador/conceitosEscolha.html" id="a-conceito">Conceitos</a>
             </div>
             <div id="alunos">
                 <img src="../icons/student.svg" alt="icon-registro">
@@ -70,13 +70,13 @@
             </div>
         </div>
         <hr>
-        <a href="/frontend/index.html">Sair</a>
+        <a href="../index.html">Sair</a>
     </nav>
     <div id="geral">
         <header>
-            <img src=" /frontend/img/logo.png" alt="logo-senac" id="logo-senac">
+            <img src="../img/logo.png" alt="logo-senac" id="logo-senac">
             <div id="pastas">
-                <a href="/frontend/coordenador/home.html" class="pasta-anterior">Home</a>
+                <a href="../coordenador/home.html" class="pasta-anterior">Home</a>
                 <p>></p>
                 <p id="pasta-atual">Alunos</p>
             </div>
@@ -85,7 +85,10 @@
             <h1>Alunos</h1>
             <div id="conteudo">
                 <div id="filtros">
-                    <input type="text" name="search-nome" id="search-nome" placeholder="nome">
+                    <div id="input-search">
+                        <img src="../icons/search.svg" alt="search-icon">
+                        <input type="search" name="search-nome" id="search-nome" placeholder="nome">
+                    </div>
                     <select name="select-turma" id="select-turma">
                         <option value="" selected hidden disabled>Turma</option>
                     </select>

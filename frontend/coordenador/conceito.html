@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/conceitosCoord.css">
     <link rel="stylesheet" href="../css/registros.css">
-    <link rel="stylesheet" href="../css/turmas.css">
     <style>
         #inicio {
             background-color: rgba(0, 0, 0, 0);
             opacity: .5;
         }
 
-        #disciplinas {
+        #conceitos {
             background-color: #92A6E2;
             opacity: 100;
             border-top-right-radius: 4px;
@@ -23,25 +23,7 @@
         #filtros {
             gap: 20%;
         }
-
-        #inicio {
-            background-color: rgba(0, 0, 0, 0);
-            opacity: .5;
-        }
-
-        #turmas {
-            background-color: #92A6E2;
-            opacity: 100;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        #disciplinas {
-            opacity: .5;
-            background-color: rgba(0, 0, 0, 0);
-        }
     </style>
-    <link rel="stylesheet" href="../css/disciplinas.css">
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,8 +36,8 @@
     <div id="menu-placeholder"></div>
     <nav id="menu">
         <div id="logo-user">
-            <img src="/frontend/img/mediotec 1.png" alt="logo-mediotec">
-            <h3>Turmas</h3>
+            <img src="../img/mediotec 1.png" alt="logo-mediotec">
+            <h3>Coordenador</h3>
         </div>
         <hr>
         <div id="options">
@@ -69,7 +51,7 @@
             </div>
             <div id="conceitos">
                 <img src="../icons/conceitos.svg" alt="icon-conceitos">
-                <a href="#" id="a-conceito">Conceitos</a>
+                <a href="../coordenador/conceitosEscolha.html" id="a-conceito">Conceitos</a>
             </div>
             <div id="alunos">
                 <img src="../icons/student.svg" alt="icon-registro">
@@ -77,7 +59,7 @@
             </div>
             <div id="professor">
                 <img src="../icons/professor.svg" alt="icon-professor">
-                <a href="../coordenador/professores.html">Professor</a>
+                <a href="../coordenador/professores">Professor</a>
             </div>
             <div id="coordenador">
                 <img src="../icons/admin-alt.svg" alt="icon-coordenadores">
@@ -85,7 +67,7 @@
             </div>
             <div id="turmas">
                 <img src="../icons/turmas.svg" alt="icon-turmas">
-                <a href="#">Turmas</a>
+                <a href="../coordenador/turmas.html">Turmas</a>
             </div>
             <div id="disciplinas">
                 <img src="../icons/disciplinas.svg" alt="icon-disciplinas">
@@ -93,59 +75,55 @@
             </div>
         </div>
         <hr>
-        <a href="/frontend/index.html">Sair</a>
+        <a href="../index.html">Sair</a>
     </nav>
     <div id="geral">
         <header>
-            <img src=" /frontend/img/logo.png" alt="logo-senac" id="logo-senac">
+            <img src="../img/logo.png" alt="logo-senac" id="logo-senac">
             <div id="pastas">
-                <a href="/frontend/coordenador/home.html" class="pasta-anterior">Home</a>
+                <a href="../coordenador/home.html" class="pasta-anterior">Home</a>
                 <p>></p>
-                <p id="pasta-atual">Turmas</p>
+                <p id="pasta-atual">Conceitos</p>
             </div>
         </header>
         <main>
-            <h1>Turmas</h1>
+            <div id="titulo-filtro">
+                <h1 id="titulo">Conceitos</h1>
+                <select name="select-disciplina" id="select-disciplina">
+                    <option value="" disabled hidden selected>Disciplina</option>
+                </select>
+                <select name="select-unidade" id="select-unidade">
+                    <option value="" disabled hidden selected>Unidade</option>
+                    <option value="unidade1">Unidade 1</option>
+                    <option value="unidade1">Unidade 2</option>
+                    <option value="unidade1">Unidade 3</option>
+                </select>
+            </div>
             <div id="conteudo">
-                <div id="filtros">
-                    <input type="text" name="search-nome" id="search-nome" placeholder="Nome">
-                    <button type="button" id="registrar"><img src="../icons/add.svg" alt="icon-add">Registrar</button>
+                <div id="atributos">
+                    <div id="nome">Nome do aluno</div>
+                    <div id="av1">AV1</div>
+                    <div id="av2">AV2</div>
+                    <div id="mu">MU</div>
+                    <div id="mupn1">MUPN1</div>
+                    <div id="mupn2">MUPN2</div>
                 </div>
-                <div id="container-lista">
-                    <div>
-                        <p>Nome</p>
-                        <p>Turno</p>
-                    </div>
-                    <ul id="lista">
-                        <h1 id="vazia">Lista Vazia :(</h1>
-                    </ul>
-                </div>
+                <ul>
+                    <li>
+                        <div class="nome">João Maria josé</div>
+                        <div class="av1">A</div>
+                        <div class="av2">A</div>
+                        <div class="mu">NA</div>
+                        <div class="mupn1">A</div>
+                        <div class="mupn2">PA</div>
+                    </li>
+                </ul>
+                <button type="button"><a href="../coordenador/conceitosEscolha.html">Voltar</a></button>
             </div>
         </main>
     </div>
-    <form action="" id="form-turmas">
-        <div id="close">
-            <img src="../icons/close.svg" alt="close-icon" id="close-icon">
-        </div>
-        <h1>Turma</h1>
-        <label for="nome-input">Nome</label>
-        <br>
-        <input type="text" name="nome-input" id="nome-input" placeholder="Nome" required>
-        <br>
-        <label for="select-disciplina">Turno</label>
-        <br>
-        <select name="select-turno" id="select-turno" required>
-            <option value="" selected disabled hidden>Turno</option>
-            <option value="Manhã">Manhã</option>
-            <option value="Tarde">Tarde</option>
-            <option value="Noite">Noite</option>
-        </select>
-        <br>
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script src="../js/turmas.js"></script>
-    <script src="../app.js" type="module"></script>
+    <script src="../js/disciplinas.js"></script>
+    <script src="../app.js"></script>
 </body>
 
 </html>

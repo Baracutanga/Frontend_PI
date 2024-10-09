@@ -1,16 +1,19 @@
-main { 
+main {
     margin: 40px auto;
     width: 90%;
+    height: 55vh;
 }
 
 #titulo-filtro {
     background-color: #fff;
     padding: 17px;
+    display: flex;
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
 
     & h1 {
         color: #2E4EAD;
+        width: 780px;
     }
 }
 
@@ -19,10 +22,108 @@ main {
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, .4);
-    width: fit-content;
+    width: 200px;
+    border-radius: 20px;
 
     & input {
         border: 0px;
         padding: 0px;
+        outline: none;
+        font-family: 'Albert Sans';
+        margin-left: 5px;
     }
+
+    & img {
+        width: 9%;
+        filter: invert(1);
+        background-color: #ad8f2e;
+        padding: 5px;
+        border-radius: 20px;
+    }
+}
+
+#atributos {
+    background-color: #fff;
+    width: 94.6%;
+    padding: 15px;
+    margin-top: 10px;
+    padding-left: 40px;
+}
+
+ul {
+    width: 100%;
+    height: 56vh;
+    background-color: #fff;
+    padding: 0px;
+    overflow-y: auto;
+    border-radius: 2px;
+    margin: 0px;
+
+    & li {
+        width: 97%;
+        display: flex;
+        align-items: center;
+        background-color: #eeeeee;
+        border-bottom: 1px solid rgba(0, 0, 0, .4);
+        border-top: 1px solid rgba(0, 0, 0, .4);
+        list-style: none;
+        padding-left: 30px;
+
+        & div {
+            padding: 5px 10px;
+        }
+
+        & .nome-turno {
+            width: 80%;
+
+            & .nome {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+
+
+        & button {
+            width: 90px;
+            background-color: #2E4EAD;
+            height: 30px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, .4);
+
+            & a {
+                color: rgba(255, 255, 255, .4);
+            }
+        }
+        
+        & button:hover {
+            box-shadow: none;
+            transition: ease-in-out 100ms;
+
+            & a {
+                color: rgba(255, 255, 255, 1);
+                transition: ease-in-out 100ms; 
+            }
+        }
+    }
+}
+
+li:hover {
+    background-color: #c7cfff;
+    transition: ease-in-out 100ms;
+}
+
+#vazia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 42px;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, .4);
 }
