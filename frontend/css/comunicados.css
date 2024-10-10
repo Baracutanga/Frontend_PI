@@ -208,6 +208,9 @@ textarea {
     width: 30%;
 
     & a button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 10px;
         border-radius: 20px;
         outline: none;
@@ -217,6 +220,10 @@ textarea {
         background-color: #21618C;
         color: #fff;
         cursor: pointer;
+
+        & a {
+            text-decoration: none;
+        }
     }
 }
 

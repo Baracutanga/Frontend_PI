@@ -9,6 +9,47 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+const pfp = document.querySelector('#pfp');
+
+pfp.addEventListener('click', () => {
+
+})
+
+// Abrir menu mobile
+const menuBurguer = document.getElementById('menu-burger');
+const menu = document.getElementById('menu-mobile');
+
+menuBurguer.addEventListener('click', () => {
+    if (menu.classList.contains('menu-aberto')) {
+        // Fecha o menu
+        menuBurguer.src = '../icons/menu-burger.svg';
+        menu.classList.remove('menu-aberto');
+    } else {
+        // Abre o menu
+        menuBurguer.src = '../icons/caret-down.svg';
+        menu.classList.add('menu-aberto');
+    }
+});
+
+// Páginas
+const inicio = document.getElementById('home');
+const comunicados = document.getElementById('comunicados');
+const conceitos = document.getElementById('conceitos');
+
+
+inicio.addEventListener('click', () => {
+    window.location.href = '/frontend/coordenador/home.html'
+})
+
+comunicados.addEventListener('click', () => {
+    window.location.href = '/frontend/coordenador/comunicados.html'
+})
+
+conceitos.addEventListener('click', () => {
+    window.location.href = '/frontend/coordenador/conceitos.html'
+})
+
+const token = localStorage.getItem('token');
 
 // Abrir/Fechar forms
 const btnRegistrar = document.getElementById('registrar');
@@ -26,15 +67,15 @@ closeBtn.addEventListener('click', () => {
 // Enviar registros
 // Forms
 const formProf = document.getElementById('form-professor');
-const formAluno = document.getElementById('form-alunos');
+const formAluno = document.querySelector('#form-alunos');
 const formDisciplina = document.getElementById('form-disciplina');
 const formTurma = document.getElementById('form-turmas');
-const formCoord = document.getElementById('form-coordenador');
+const formCoord = document.querySelector('#form-coordenador');
 
 // Inputs
-const inputNome = document.getElementById('nome-input');
-const inputEmail = document.getElementById('email-input');
-const inputSenha = document.getElementById('senha-input');
+const inputNome = document.querySelector('#nome-input');
+const inputEmail = document.querySelector('#email-input');
+const inputSenha = document.querySelector('#senha-input');
 const selectProf = document.getElementById('select-professor');
 const selectTurno = document.getElementById('select-turno')
 const selectTurma = document.getElementById('select-turma');
@@ -46,7 +87,8 @@ formAluno.addEventListener('submit', async (event) => {
         const response = await fetch('http://localhost:8000/api/aluno/create', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 nome: inputNome.value,
@@ -73,7 +115,8 @@ formProf.addEventListener('submit', async (event) => {
         const response = await fetch('http://localhost:8000/api/professor/create', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 nome: inputNome.value,
@@ -99,7 +142,8 @@ formDisciplina.addEventListener('submit', async (event) => {
         const response = await fetch('http://localhost:8000/api/disciplina/create', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 nome: inputNome.value,
@@ -124,7 +168,8 @@ formTurma.addEventListener('submit', async (event) => {
         const response = await fetch('http://localhost:8000/api/turma/create', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 nome: inputNome.value,
@@ -150,7 +195,8 @@ formCoord.addEventListener('submit', async (event) => {
         const response = await fetch('http://localhost:8000/api/coordenador/create', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 nome: inputNome.value,
@@ -161,6 +207,8 @@ formCoord.addEventListener('submit', async (event) => {
         if (!response.ok) {
             throw new Error(`Erro ao enviar user: ${response.status}`);
         }
+        const errorResponse = await response.text();
+        console.error('Resposta de erro:', errorResponse);
         alert(`Coordenador ${inputNome.value} Adicionado!`);
 
         window.location.reload();
@@ -168,3 +216,9 @@ formCoord.addEventListener('submit', async (event) => {
         console.error('Não foi possiver cadastrar coordenador', error);
     }
 })
+
+function signout() {
+    localStorage.removeItem('token');
+
+    window.location.href = '../index.html';
+}

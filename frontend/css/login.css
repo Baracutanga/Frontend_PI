@@ -55,3 +55,49 @@ button {
     border: 1px solid rgba(0, 0, 0, .4);
     border-radius: 3px;
 }
+
+#container {
+    background-color: #bebebe6e;
+    height: 510px;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 350px;
+    padding: 10px;
+    margin: 20px auto;
+
+    & br {
+        display: none;
+    }
+
+    & input {
+        width: 97%;
+        height: 30px;
+        margin-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0px;
+        border-bottom: 1px solid #000;
+        outline: none;
+    }
+
+    & #select-user {
+        width: 100%;
+        padding: 8px;
+    }
+
+    & button {
+        font-size: 18px;
+        font-weight: 700;
+        height: 50px;
+    }
+}
+
+img {
+    width: 40%;
+}
