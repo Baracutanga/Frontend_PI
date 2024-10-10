@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="manifest" href="../manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>Portal Mediotec</title>
 </head>
+
 <body>
-    <div id="login-container">
+    <div id="container">
         <img src="./img/mediotec 1.png" alt="mediotec-logo">
         <h1>Bem Vindo!</h1>
-        <label for="select-user">Escolha o usuário</label>
-        <br>
-        <select name="select-user" id="select-user" required>
-            <option value="" disabled selected>Usuário</option>
-            <option value="coordenador">Coordenador</option>
-            <option value="professor">Professor</option>
-            <option value="aluno">Aluno</option>
-        </select>
-        <br>
-        <label for="input-email">Login</label>
-        <br>
-        <div class="inputs">
-            <img src="../frontend/icons/login.svg" alt="email-icon">
-            <input type="email" name="email-input" id="email-input" placeholder="Email">
-        </div>
-        <br>
-        <label for="senha-input">Senha</label>
-        <div class="inputs">
-            <img src="../frontend/icons/senha.svg" alt="senha-icon">
-            <input type="password" name="senha-input" id="senha-input" placeholder="Senha">
-        </div>
-        <br>
-        <button onclick="Redirecionar()"><h2>Entrar</h2></button>
+        <form id="login-form" method="POST">
+            <label for="select-user">Escolha o usuário</label>
+            <br>
+            <select name="select-user" id="select-user" required>
+                <option value="" disabled selected>Usuário</option>
+                <option value="coordenador">Coordenador</option>
+                <option value="professor">Professor</option>
+                <option value="aluno">Aluno</option>
+            </select>
+            <br>
+            <label for="input-email">Login</label>
+            <br>
+            <input type="email" name="input-email" id="input-email" placeholder="Email">
+            <br>
+            <label for="senha-input">Senha</label>
+            <br>
+            <input type="password" name="input-senha" id="input-senha" placeholder="Senha">
+            <br>
+            <button type="submit">Entrar</button>
+        </form>
     </div>
 
+    <script src="js/login.js"></script>
+    <script src="app.js"></script>
     <script>
-        function Redirecionar() {
-            const selectUserValue = document.getElementById('select-user').value;
+        const loginForm = document.querySelector('#login-form');
 
-            if (selectUserValue === 'coordenador') {
-                window.location.href = '/frontend/coordenador/home.html'
-            } else if (selectUserValue === 'professor') {
-                window.location.href = '/frontend/professor/home.html'
+        loginForm.addEventListener('submit', () => {
+            const userChoice = document.querySelector('#select-user');
+            if (userChoice.value === 'coordenador') {
+                window.location.href = 'coordenador/home.html';
+            } else {
+                window.location.href = 'professor/home.html';
             }
-        }
+        })
     </script>
 </body>
+
 </html>

@@ -45,7 +45,7 @@ main hr {
 
 header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     background-color: #fff;
     width: 100%;
 }
@@ -189,7 +189,7 @@ header {
         display: none;
     }
 
-    & label { 
+    & label {
         margin-left: 20px;
         margin-top: 20px;
     }
@@ -236,5 +236,168 @@ header {
     #menu-placeholder {
         min-width: 170px;
         height: 100vh;
+    }
+}
+
+#pfp {
+    position: absolute;
+    right: 1%;
+    width: 50px;
+    margin-right: 20px;
+
+    & img {
+        width: 90%;
+    }
+
+}
+
+#menu-mobile {
+    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: -610px;
+    height: 90vh;
+    background-color: #233e8f;
+    transition: bottom 500ms ease-in-out;
+}
+
+#menu-mobile.menu-aberto {
+    bottom: -350px;
+}
+
+#opcoes-mobile {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    gap: 15%;
+    margin: 0px auto;
+}
+
+.column {
+    justify-content: center;
+    display: flex;
+    margin: 25px auto;
+    gap: 20%;
+    width: 80%;
+    color: #fff;
+    opacity: .8;
+}
+
+#acesso-rapido {
+    background-color: #2E4EAD;
+    display: none;
+    width: 100%;
+    bottom: 0px;
+    height: 70px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    & img {
+        width: 11%;
+        margin: 0px 10px;
+        filter: invert(1);
+        opacity: .6;
+    }
+    
+    & #divisor {
+        width: 3px;
+        background-color: #fff;
+        height: 80%;
+        border-radius: 20px;
+        opacity: .5; 
+    }
+
+    & #comunicados {
+        filter: invert(1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & img {
+            width: 30%;
+            opacity: 1;
+        }
+
+        & div {
+            font-size: 13px;
+        }
+    }
+
+    & #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        filter: invert(1);
+
+        & img {
+            filter: invert(1);
+            width: 56%;
+            opacity: 1;
+        }
+
+        & div {
+            font-size: 13px;
+        }
+    }
+
+    & #conceitos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        filter: invert(1);
+
+        & img {
+            width: 33%;
+        }
+
+        & div {
+            font-size: 13px;
+        }
+    }
+}
+
+#opcoes {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 60vh;
+    margin: 20px auto; 
+;}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55px;
+    height: 55px;
+
+    & img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        & img {
+            width: 25%;
+        }
+    }
+
+    #menu-mobile {
+        display: block;
+    }
+
+    #acesso-rapido {
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-placeholder,
+    #menu {
+        display: none;
     }
 }

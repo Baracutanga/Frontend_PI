@@ -2,12 +2,15 @@ const ul = document.getElementById('lista');
 const barraPesquisa = document.getElementById('search-nome');
 
 async function carregarProfessores() {
+    const token = localStorage.getItem('token');
+
     try {
         const response = await fetch('http://localhost:8000/api/professor/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Cache-Control': 'no-cache, no-store, must-revalidate'
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Authorization': `Bearer ${token}`
             },
         })
         if (!response.ok) {

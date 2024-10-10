@@ -35,7 +35,6 @@
                 <a href="#" id="a-conceito">Conceitos</a>
             </div>
             <hr>
-            <a href="/frontend/index.html">Sair</a>
     </nav>
     <div id="geral">
         <header>
@@ -44,6 +43,9 @@
                 <a href="../professor/home.html" class="pasta-anterior">Home</a>
                 <p>></p>
                 <p id="pasta-atual">Conceitos</p>
+            </div>
+            <div id="pfp">
+                <img src="../img/imagem-do-usuario-com-fundo-preto (1).png" alt="img-user">
             </div>
         </header>
         <div id="container-main">
@@ -66,9 +68,9 @@
                 </div>
                 <div id="alunos-list">
                     <!-- <h1>Lista indisponível :(</h1> -->
-                    <ul>
+                    <ul id="lista">
                         <li id="aluno">
-                            <p>Maria lsdam ladalskdmasd de masldkasd</p>
+                            <div>Maria lsdam ladalskdmasd de masldkasd</div>
                             <select name="select-av1" id="select-av1">
                                 <option value="conceito" disabled selected>Selecionar</option>
                                 <option value="a">A</option>
@@ -104,13 +106,14 @@
                 </div>
                 <div id="enviar-voltar">
                     <a href="/frontend/professor/home.html"><button type="button">Voltar</button></a>
-                    <button type="button" id="enviar">Enviar</button>
+                    <button type="button" id="enviar" onclick="carregarAlunos()">Enviar</button>
                 </div>
             </main>
         </div>
     </div>
 
     <script src="../app.js"></script>
+    <script src="../js/conceitos.js"></script>
 </body>
 
 </html>
