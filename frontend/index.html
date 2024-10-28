@@ -6,9 +6,9 @@
     <link rel="manifest" href="../manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <title>Portal Mediotec</title>
@@ -32,28 +32,16 @@
             <br>
             <input type="email" name="input-email" id="input-email" placeholder="Email">
             <br>
-            <label for="senha-input">Senha</label>
+            <label for="input-senha">Senha</label>
             <br>
             <input type="password" name="input-senha" id="input-senha" placeholder="Senha">
             <br>
-            <button type="submit">Entrar</button>
+            <button type="submit" onclick="login()">Entrar</button>
         </form>
     </div>
 
     <script src="js/login.js"></script>
     <script src="app.js"></script>
-    <script>
-        const loginForm = document.querySelector('#login-form');
-
-        loginForm.addEventListener('submit', () => {
-            const userChoice = document.querySelector('#select-user');
-            if (userChoice.value === 'coordenador') {
-                window.location.href = 'coordenador/home.html';
-            } else {
-                window.location.href = 'professor/home.html';
-            }
-        })
-    </script>
 </body>
 
 </html>

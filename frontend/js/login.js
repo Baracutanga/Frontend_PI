@@ -3,6 +3,7 @@ const formLogin = document.querySelector('#login-form');
 formLogin.addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    const token = localStorage.getItem('token');
     const inputEmail = document.querySelector('#input-email');
     const inputSenha = document.querySelector('#input-senha');
 
@@ -10,8 +11,8 @@ formLogin.addEventListener('submit', async (event) => {
         const response = await fetch('http://localhost:8000/api/login/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
                 email: inputEmail.value,

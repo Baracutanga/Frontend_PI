@@ -9,27 +9,17 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+<<<<<<< HEAD
+const URL = 'http://localhost:8000/api'
+
+=======
+// Abrir opções de usuário
+>>>>>>> da0507da988addb928f2b49775d9e534b1de4c19
 const pfp = document.querySelector('#pfp');
 
-pfp.addEventListener('click', () => {
+// pfp.addEventListener('click', () => {
 
-})
-
-// Abrir menu mobile
-const menuBurguer = document.getElementById('menu-burger');
-const menu = document.getElementById('menu-mobile');
-
-menuBurguer.addEventListener('click', () => {
-    if (menu.classList.contains('menu-aberto')) {
-        // Fecha o menu
-        menuBurguer.src = '../icons/menu-burger.svg';
-        menu.classList.remove('menu-aberto');
-    } else {
-        // Abre o menu
-        menuBurguer.src = '../icons/caret-down.svg';
-        menu.classList.add('menu-aberto');
-    }
-});
+// })
 
 // Páginas
 const inicio = document.getElementById('home');
@@ -37,20 +27,30 @@ const comunicados = document.getElementById('comunicados');
 const conceitos = document.getElementById('conceitos');
 
 
-inicio.addEventListener('click', () => {
-    window.location.href = '/frontend/coordenador/home.html'
-})
+// inicio.addEventListener('click', () => {
+//     window.location.href = '../coordenador/home.html'
+// })
 
 comunicados.addEventListener('click', () => {
-    window.location.href = '/frontend/coordenador/comunicados.html'
+    window.location.href = '../coordenador/comunicados.html'
 })
 
 conceitos.addEventListener('click', () => {
-    window.location.href = '/frontend/coordenador/conceitos.html'
+    window.location.href = '../coordenador/conceitos.html'
 })
 
+<<<<<<< HEAD
+=======
 const token = localStorage.getItem('token');
 
+const atalhoComunicado = document.getElementById('comunicados-atalho');
+// const atalhoConceitos = document.getElementById('conceitos-atalho');
+
+atalhoComunicado.addEventListener('click', () => {
+    document.getElementById('formulario').style.display = 'block';
+})
+
+>>>>>>> da0507da988addb928f2b49775d9e534b1de4c19
 // Abrir/Fechar forms
 const btnRegistrar = document.getElementById('registrar');
 const closeBtn = document.getElementById('close-icon');
@@ -71,14 +71,18 @@ const formAluno = document.querySelector('#form-alunos');
 const formDisciplina = document.getElementById('form-disciplina');
 const formTurma = document.getElementById('form-turmas');
 const formCoord = document.querySelector('#form-coordenador');
+const login = document.querySelector('#login-form');
 
 // Inputs
 const inputNome = document.querySelector('#nome-input');
 const inputEmail = document.querySelector('#email-input');
 const inputSenha = document.querySelector('#senha-input');
+const emailLogin = document.querySelector('#input-email');
+const senhaLogin = document.querySelector('#input-senha');
 const selectProf = document.getElementById('select-professor');
 const selectTurno = document.getElementById('select-turno')
 const selectTurma = document.getElementById('select-turma');
+const selectUser = document.querySelector('#select-user');
 
 formAluno.addEventListener('submit', async (event) => {
     event.preventDefault();

@@ -3,10 +3,13 @@ const barraPesquisa = document.getElementById('search-nome');
 
 // Função para carregar os alunos
 async function carregarAlunos() {
+    const token = localStorage.getItem('token');
+
     try {
         const response = await fetch('http://localhost:8000/api/aluno/', {
             method: 'GET',
             headers: {
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache, no-store, must-revalidate'
             },

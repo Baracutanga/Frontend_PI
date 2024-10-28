@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -16,7 +16,7 @@
     <div id="menu-placeholder"></div>
     <nav id="menu">
         <div id="logo-user">
-            <img src="/frontend/img/mediotec 1.png" alt="logo-mediotec">
+            <img src="../img/mediotec 1.png" alt="logo-mediotec">
             <h3>Professor</h3>
         </div>
         <hr>
@@ -43,9 +43,43 @@
                 <img src="../img/imagem-do-usuario-com-fundo-preto (1).png" alt="img-user">
             </div>
         </header>
+        <main>
+            <div id="left">
+                <section id="welcome">
+                    <img src="../img/senac-photo.png" alt="senac-photo">
+                    <h1>Bem Vindo ao Sistema TecView</h1>
+                    <h3>Mediotec - Senac</h2>
+                    <p>Concetando educação e tecnologia, trazendo excelência na comunicação</p>
+                </section>
+                <section id="atalhos">
+                    <h1>Atalhos</h1>
+                    <div>
+                        <div class="atalho" id="comunicados-atalho"><img src="../icons/forum.svg" alt="icon-comunicados"></div>
+                        <div class="atalho" id="conceitos-atalho"><img src="../icons/Conceitos.svg" alt="icon-conceitos"></div>
+                    </div>
+                </section>
+            </div>
+            <div id="right"></div>
+            <form id="formulario">
+                <h1>Adicionar Aviso</h1>
+                <br>
+                <h3>Título</h3>
+                <br>
+                <input type="text" name="titulo" id="titulo-area" placeholder="Digite um titulo" maxlength="40">
+                <br>
+                <h3>Comunicado</h3>
+                <br>
+                <textarea name="comunicao-textarea" id="comunicao-textarea" placeholder="Digite o conteudo aqui"></textarea>
+                <br>
+                <div id="btn-enviar">
+                    <button type="submit" id="enviar-btn" onmousedown="ClickChange()"
+                        onmouseup="ClickBack()">Enviar</button>
+                </div>
+            </form>
+        </main>
     </div>
 
-    <script src="/frontend/app.js" type="module"></script>
+    <script src="../app.js" type="module"></script>
 </body>
 
 </html>
